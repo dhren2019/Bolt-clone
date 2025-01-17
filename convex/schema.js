@@ -13,5 +13,10 @@ export default defineSchema({
         messages:v.any(),//JSON OBJECT
         fileData:v.optional(v.any()),
         user:v.id('users')
-    })
+    }),
+    github_tokens: defineTable({
+        userId: v.string(), // ID del usuario (validador correcto)
+        token: v.string(),  // Token de GitHub (validador correcto)
+      }),
 })
+

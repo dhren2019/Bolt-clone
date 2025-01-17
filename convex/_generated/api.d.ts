@@ -13,6 +13,8 @@ import type {
   FilterApi,
   FunctionReference,
 } from "convex/server";
+import type * as functions_createGitHubRepo from "../functions/createGitHubRepo.js";
+import type * as functions_storeGitHubToken from "../functions/storeGitHubToken.js";
 import type * as users from "../users.js";
 import type * as workspace from "../workspace.js";
 
@@ -25,6 +27,8 @@ import type * as workspace from "../workspace.js";
  * ```
  */
 declare const fullApi: ApiFromModules<{
+  "functions/createGitHubRepo": typeof functions_createGitHubRepo;
+  "functions/storeGitHubToken": typeof functions_storeGitHubToken;
   users: typeof users;
   workspace: typeof workspace;
 }>;
